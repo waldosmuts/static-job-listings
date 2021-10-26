@@ -1,0 +1,216 @@
+body {
+  margin: 0;
+  font-family: "Spartan", sans-serif;
+  font-size: 15px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+header {
+  height: 160px;
+  background: 100%/cover no-repeat url(../images/bg-header-mobile.svg), #5ba4a4;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+main {
+  background: #effafa;
+  padding: 50px 25px 0;
+}
+
+main .listing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  background: #eef6f6;
+  padding: 25px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 15px 74px -30px #5ba4a4;
+          box-shadow: 0px 15px 74px -30px #5ba4a4;
+  margin-bottom: 40px;
+}
+
+main .listing img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -25px;
+}
+
+main .listing .listing-info {
+  margin: 8px 0 10px 0;
+}
+
+main .listing .listing-info .company {
+  font-size: 13px;
+  font-weight: 700;
+  color: #5ba4a4;
+  margin-right: 12px;
+}
+
+main .listing .listing-info button {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  color: #eef6f6;
+  border-radius: 12px;
+  padding: 5px 8px;
+  margin-right: 5px;
+}
+
+main .listing .listing-info button.detail-new {
+  background: #5ba4a4;
+}
+
+main .listing .listing-info button.detail-featured {
+  background: #2c3a3a;
+}
+
+main .listing .listing-position {
+  font-size: 15px;
+  color: #2c3a3a;
+  margin: 0 0 15px;
+}
+
+main .listing .listing-details {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #7b8e8e;
+}
+
+main .listing .listing-details span {
+  font-size: 13px;
+  color: #7b8e8e;
+}
+
+main .listing .listing-details span.bullet {
+  font-size: 15px;
+  margin: 0 3px;
+}
+
+main .listing .listing-tags {
+  padding: 15px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px;
+}
+
+main .listing .listing-tags button {
+  background: rgba(91, 164, 164, 0.1);
+  color: #5ba4a4;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  height: 32px;
+}
+
+main .listing.featured-listing {
+  border-radius: 0 5px 5px 0;
+}
+
+main .listing.featured-listing::before {
+  content: "";
+  background: #5ba4a4;
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+main .listing.listing-template {
+  display: none;
+}
+
+footer {
+  margin-bottom: 25px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: #2c3a3a;
+}
+
+.attribution a {
+  color: #5ba4a4;
+}
+
+@media screen and (min-width: 1000px) {
+  header {
+    background: 100%/cover no-repeat url(../images/bg-header-desktop.svg), #5ba4a4;
+  }
+  main {
+    padding: 75px 150px 0;
+  }
+  main .listing {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 25px;
+    padding: 25px 40px;
+  }
+  main .listing .listing-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-right: 25px;
+  }
+  main .listing .listing-header .listing-info {
+    margin: 0;
+  }
+  main .listing .listing-header .listing-info .company {
+    font-size: 14px;
+  }
+  main .listing .listing-header .listing-position {
+    margin: 10px 0;
+    font-size: 17px;
+  }
+  main .listing .listing-header .listing-details {
+    border: none;
+    padding: 0;
+  }
+  main .listing .listing-header .listing-details span {
+    font-size: 14px;
+  }
+  main .listing .listing-header .listing-details span.bullet {
+    margin: 0 8px;
+  }
+  main .listing .logo {
+    position: static;
+    width: 90px;
+    height: 90px;
+    margin-right: 25px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

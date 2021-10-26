@@ -1,0 +1,180 @@
+@import "../utils/variables";
+
+body {
+  margin: 0;
+  font-family: $-f-spartan;
+  font-size: 15px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+header {
+  height: 160px;
+  background: 100% / cover no-repeat url(../images/bg-header-mobile.svg), $-c-highlight;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+main {
+  background: $-c-background;
+  padding: 50px 25px 0;
+  .listing {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: $-c-filter;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 15px 74px -30px $-c-highlight;
+    margin-bottom: 40px;
+    img {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: -25px;
+    }
+    .listing-info {
+      margin: 8px 0 10px 0;
+      .company {
+        font-size: 13px;
+        font-weight: 700;
+        color: $-c-highlight;
+        margin-right: 12px;
+      }
+      button {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+        color: $-c-filter;
+        border-radius: 12px;
+        padding: 5px 8px;
+        margin-right: 5px;
+        &.detail-new {
+          background: $-c-highlight;
+        }
+        &.detail-featured {
+          background: $-c-dark-cyan;
+        }
+      }
+    }
+    .listing-position {
+      font-size: 15px;
+      color: $-c-dark-cyan;
+      margin: 0 0 15px;
+    }
+    .listing-details {
+      padding-bottom: 15px;
+      border-bottom: 1px solid $-c-cyan;
+      span {
+        font-size: 13px;
+        color: $-c-cyan;
+        &.bullet {
+          font-size: 15px;
+          margin: 0 3px;
+        }
+      }
+    }
+    .listing-tags {
+      padding: 15px 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      button {
+        background: hsla(180, 29%, 50%, 0.1);
+        color: $-c-highlight;
+        font-weight: 700;
+        font-size: 14px;
+        padding: 8px 10px;
+        border-radius: 5px;
+        height: 32px;
+      }
+    }
+    &.featured-listing {
+      border-radius: 0 5px 5px 0;
+      &::before {
+        content: "";
+        background: $-c-highlight;
+        width: 5px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 5px 0 0 5px;
+      }
+    }
+    &.listing-template {
+      display: none;
+    }
+  }
+}
+
+footer {
+  margin-bottom: 25px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: $-c-dark-cyan;
+    a {
+        color: $-c-highlight;
+      }
+}
+
+@media screen and (min-width: 1000px) {
+  header {
+    background: 100% / cover no-repeat url(../images/bg-header-desktop.svg), $-c-highlight;
+  }
+
+  main {
+    padding: 75px 150px 0;
+    .listing {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 25px;
+      padding: 25px 40px;
+      .listing-header {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        margin-right: 25px;
+        .listing-info {
+          margin: 0;
+          .company {
+            font-size: 14px;
+          }
+        }
+        .listing-position {
+          margin: 10px 0;
+          font-size: 17px;
+        }
+        .listing-details {
+          border: none;
+          padding: 0;
+          span {
+            font-size: 14px;
+            &.bullet {
+              margin: 0 8px;
+            }
+          }
+        }
+      }
+      .logo {
+        position: static;
+        width: 90px;
+        height: 90px;
+        margin-right: 25px;
+      }
+      
+    }
+  }
+}
