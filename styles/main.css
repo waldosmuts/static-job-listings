@@ -16,6 +16,10 @@ header {
   background: 100%/cover no-repeat url(../images/bg-header-mobile.svg), #5ba4a4;
 }
 
+header h1 {
+  display: none;
+}
+
 button {
   outline: none;
   border: none;
