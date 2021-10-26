@@ -15,6 +15,9 @@ body {
 header {
   height: 160px;
   background: 100% / cover no-repeat url(../images/bg-header-mobile.svg), $-c-highlight;
+  h1 {
+    display: none;
+  }
 }
 
 button {
