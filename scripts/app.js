@@ -1,7 +1,7 @@
 let data;
 
 async function getListings() {
-    data = await $.getJSON("../data.json");
+    data = await $.getJSON("./data.json");
 }
 
 getListings().then(listListings)
