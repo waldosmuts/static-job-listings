@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: $-f-spartan;
   font-size: 15px;
+  background: $-c-background;
   -ms-overflow-style: none;
   scrollbar-width: none;
   &::-webkit-scrollbar {
@@ -118,6 +119,7 @@ main {
 
 footer {
   margin-bottom: 25px;
+  background: $-c-background;
 }
 
 .attribution {
